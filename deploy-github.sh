@@ -8,10 +8,10 @@ git commit -m '.'
 git push origin gh-pages
 
 rm -rf $DIR
-bundle exec jekyll build -d /tmp/_site
+jekyll build -d $DIR
 
 git checkout master
-cp -r /tmp/_site/* .
+cp -r ${DIR}/* .
 git add .
 git commit -m '.'
 git push origin master
