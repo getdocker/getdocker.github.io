@@ -8,7 +8,7 @@ git commit -m '.'
 git push origin gh-pages
 
 rm -rf $DIR
-jekyll build -d /tmp/_site
+jekyll build -d $DIR
 
 git checkout master
 cp -r ${DIR}/* .
