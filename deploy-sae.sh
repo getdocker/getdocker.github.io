@@ -1,8 +1,10 @@
 #!/bin/sh
 
-rm -rf ~/work/sae/getdocker/3/* 
-bundle exec jekyll build -d ~/work/sae/getdocker/3/
-cd ~/work/sae/getdocker/3/
+DIR=~/work/sae/getdocker/1
+
+rm -rf ${DIR}/* 
+jekyll build -d $DIR
+cd $DIR
 svn add *
 svn ci -m 'jekyll deployment'
 cd -
